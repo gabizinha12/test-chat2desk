@@ -21,7 +21,7 @@ server.use(
 );
 server.use(flash());
 server.set("view engine", "ejs");
-server.set("views", "/views");
+server.set("views", "views");
 server.use(express.static("public"));
 server.use(bodyParser.urlencoded({ extended: false }));
 server.use(express.json());
@@ -31,4 +31,4 @@ server.listen(3000 || process.env.PORT, () => {
   connectionTest();
 });
 
-server.use(routes);
+server.use("/", routes);

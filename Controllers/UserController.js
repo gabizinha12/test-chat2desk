@@ -16,13 +16,17 @@ module.exports = {
           password: hash,
         });
       }
-      res.render("register");
+      return res.json(user);
     });
+  },
+
+  async Register(req, res) {
+    res.render("register");
   },
 
   async Read(req, res) {
     User.findAll().then((users) => {
-      res.render("index", { users: users });
+      res.render("index");
     });
   },
   async Login(req, res) {

@@ -7,11 +7,11 @@ const User = config.define("users", {
     allowNull: false,
   },
   email: {
-    type: Sequelize.String,
+    type: Sequelize.STRING,
     allowNull: false,
   },
   password: {
-    type: Sequelize.String,
+    type: Sequelize.STRING,
     allowNull: false,
   },
 });
