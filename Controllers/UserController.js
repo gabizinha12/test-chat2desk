@@ -7,7 +7,7 @@ module.exports = {
     let { name, email, password } = req.body;
     await User.findOne({ where: { email: email } })
       .then((users) => {
-        if (users === undefined) {
+        if (users == undefined) {
           let salt = bcrypt.genSaltSync(10);
           let hash = bcrypt.hashSync(password, salt);
 
