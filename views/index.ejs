@@ -10,9 +10,14 @@
       </tr>
     </thead>
     <tbody>
-      <tr></tr>
-
-      <tr></tr>
+      </tr>
+              <% users.forEach(user => { %>
+                <tr>
+                    <th><%=user.id %></th>
+                    <th><%=user.email %></th>
+                   
+                </tr>
+           <% }) %>
     </tbody>
   </table>
 </div>
