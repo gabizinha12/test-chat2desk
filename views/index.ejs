@@ -2,11 +2,15 @@
 <div class="container">
   <h2>Usuários</h2>
   <a class="btn btn-success mb-2" href="/user/register"> Criar novo usuário</a>
+    <a class="btn btn-primary mb-2" href="/login">Logar</a>
+        <a class="btn btn-danger mb-2" href="/logout">Sair</a>
+
   <table class="table table-bordered">
     <thead>
       <tr>
         <th>ID</th>
         <th>Email</th>
+        <th>Nome</th>
       </tr>
     </thead>
     <tbody>
@@ -15,7 +19,7 @@
                 <tr>
                     <th><%=user.id %></th>
                     <th><%=user.email %></th>
-                   
+                    <th><%=user.name %></th>           
                 </tr>
            <% }) %>
     </tbody>

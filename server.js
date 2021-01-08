@@ -6,9 +6,14 @@ const express = require("express");
 const flash = require("connect-flash");
 const connectionTest = require("./Database/connectionTest");
 const bodyParser = require("body-parser");
+const passport = require("passport");
+require("./config/Auth")(passport);
+
 const routes = require("./Routes/Routes");
 
 const server = express();
+server.use(passport.initialize());
+server.use(passport.session());
 server.use(flash());
 server.set("view engine", "ejs");
 server.set("views", "views");
